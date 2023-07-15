@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:news_1/component.dart';
 import 'package:news_1/sign_up.dart';
+import 'package:provider/provider.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -16,12 +18,14 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void backToHome() async {
-    await Future.delayed(
+    Future.delayed(
       const Duration(seconds: 2),
       () {},
     );
-
-    Navigator.pushReplacement(
+    // ignore: use_build_context_synchronously
+    await context.read<Component>().initDatabase();
+    // ignore: use_build_context_synchronously
+    Navigator.push(
       context,
       MaterialPageRoute(
         builder: (context) => SignUpScreen(),

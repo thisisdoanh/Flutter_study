@@ -11,17 +11,26 @@ dependencies:
     sdk: flutter
   flutter_svg: ^2.0.5
   provider: ^6.0.5
+  floor: ^1.4.2
   path: ^1.8.2
   sqflite: ^2.2.8+4
-
+  flutter_native_splash: ^2.3.1
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
-  
+  floor_generator: ^1.4.2
+  build_runner: ^2.3.3
 
 flutter:
   uses-material-design: true
   assets:
     - assets/images/
     - assets/icons/
+flutter_native_splash:
+  color: '#f28aea'
+  image: assets/images/logo.png
+  android: true
+  fullscreen: true
+

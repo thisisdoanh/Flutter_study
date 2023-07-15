@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'component.dart';
-import 'splash_screen.dart';
+import 'sign_up.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -21,10 +21,10 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: SplashScreen(),
+        body: SignUpScreen(),
       ),
     );
   }
